@@ -10,8 +10,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: env.clientOrigin,
+    origin: "https://gcxlx-frontend.vercel.app"
   }),
+  //cors({ origin: "*" })
 );
 app.use(morgan("dev"));
 app.use(express.json());
