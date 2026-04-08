@@ -9,12 +9,12 @@ import apiRoutes from "./routes/index.js";
 const app = express();
 
 app.use(
-  //cors({
-   // origin: "https://gcxlx-frontend.vercel.app"
-  //}),
   cors({
-    origin: "*"
-  })
+    origin: "https://gcxlx-frontend.vercel.app"
+  }),
+  //cors({
+    //origin: "*"
+  //})
 );
 app.use(morgan("dev"));
 app.use(express.json());
