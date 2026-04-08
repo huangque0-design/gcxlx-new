@@ -13,7 +13,7 @@ import {
 // console.log("OPENAI KEY:", env.openaiApiKey);
 
 // ⭐ 创建代理
-const agent = new HttpsProxyAgent("http://127.0.0.1:63338");
+//const agent = new HttpsProxyAgent("http://127.0.0.1:63338");
 
 function buildMockReply({ personalityType, latestUserMessage }) {
   const trimmedMessage = latestUserMessage?.trim() || "请继续描述你的思路。";
@@ -58,7 +58,7 @@ async function requestOpenAIChatCompletion(messages) {
       messages,
       temperature: 0.7,
     }),
-    agent, // ⭐关键：让请求走代理
+    //agent, // ⭐关键：让请求走代理
   });
 
   if (!response.ok) {
